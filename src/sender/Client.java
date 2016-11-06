@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Server {
+public class Client {
 	private final static String fileToSend = "testFile.txt";
 	
 	public static void main(String args[]) {
