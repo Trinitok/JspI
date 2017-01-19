@@ -14,15 +14,11 @@ import java.io.UnsupportedEncodingException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-<<<<<<< HEAD:src/sender/Server.java
 import keylogger.keyboardlogger;
 
 public class Server {
 //	private final static String fileToSend = "testFile.txt";
-=======
-public class Client {
-	private final static String fileToSend = "testFile.txt";
->>>>>>> a4072be3ccdce24ece9f079c3bb0db557269ae1e:src/sender/Client.java
+
 	
 	/**
 	 * reverse testing
